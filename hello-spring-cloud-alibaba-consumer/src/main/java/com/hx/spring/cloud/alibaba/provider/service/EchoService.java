@@ -2,6 +2,7 @@ package com.hx.spring.cloud.alibaba.provider.service;
 
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 
 /**
  * @author jxlgcmh
@@ -14,4 +15,7 @@ public interface EchoService {
 
     @GetMapping(value = "/lb")
     String getPort();
+
+    @GetMapping(value = "config/{user}")
+    String getUser(@PathVariable("user") String user);
 }

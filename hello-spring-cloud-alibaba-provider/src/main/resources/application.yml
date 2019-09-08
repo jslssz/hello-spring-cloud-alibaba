@@ -7,7 +7,7 @@ spring:
         server-addr: 182.92.5.36:8848
 # 服务端口
 server:
-  port: 8081
+  port: 8080
 # 健康检查
 management:
   endpoints:

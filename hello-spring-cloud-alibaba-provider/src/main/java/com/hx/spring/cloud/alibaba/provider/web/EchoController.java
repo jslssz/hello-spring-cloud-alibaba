@@ -2,6 +2,7 @@ package com.hx.spring.cloud.alibaba.provider.web;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -25,4 +26,15 @@ public class EchoController {
     public String lb() {
         return "端口号是"+port;
     }
+
+    /**
+     *  测试配置中心
+     * @param user
+     * @return
+     */
+    @GetMapping("config/{user}")
+    public String getUser(@PathVariable("user") String user){
+        return "用户名是"+user;
+    }
+
 }
