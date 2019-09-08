@@ -1,0 +1,16 @@
+spring:
+  application:
+    name: service-provider
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 182.92.5.36:8848
+# 服务端口
+server:
+  port: 8081
+# 健康检查
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
